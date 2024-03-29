@@ -137,6 +137,92 @@ function App() {
           onChange={changeHandler}
           className="border border-black rounded-md w-full px-3 py-1"
         />
+
+        <fieldset>
+          <legend className="mt-3">By Email</legend>
+
+          <input
+            type="checkbox"
+            name="comments"
+            id="comments"
+            checked={formData.comments}
+            onChange={changeHandler}
+            className="mt-3"
+          />
+          <label htmlFor="comments" className="ml-2 font-semibold">
+            Comments
+          </label>
+          <p className="ml-5 text-gray-500 ">
+            Get notified when someones posts a comment on a posting.
+          </p>
+
+          <input
+            type="checkbox"
+            name="candidates"
+            id="candidates"
+            checked={formData.candidates}
+            onChange={changeHandler}
+            className="mt-3"
+          />
+          <label htmlFor="candidates" className="ml-2 font-semibold">
+            Candidates
+          </label>
+          <p className="ml-5 text-gray-500 ">
+            Get notified when a candidate applies for a job.
+          </p>
+
+          <input
+            type="checkbox"
+            name="offers"
+            id="offers"
+            checked={formData.offers}
+            onChange={changeHandler}
+            className="mt-3"
+          />
+          <label htmlFor="offers" className="ml-2 font-semibold">
+            Offers
+          </label>
+          <p className="ml-5 text-gray-500 ">
+            Get notified when a candidate accepts or rejects an offer.
+          </p>
+        </fieldset>
+
+        <fieldset className="">
+          <legend className="mt-5 font-semibold">Push Notifications</legend>
+          <p className="text-gray-500 mb-3">
+            These are deliveres via sms to your mobile phone.
+          </p>
+
+          <input
+            type="radio"
+            name="pushNotifications"
+            id="pushEverything"
+            value="Everything"
+            onChange={changeHandler}
+          />
+          <label htmlFor="pushEverything">Everything</label>
+          <br />
+
+          <input
+            type="radio"
+            name="pushNotifications"
+            id="pushEmail"
+            value="sameAsEmail"
+            onChange={changeHandler}
+          />
+          <label htmlFor="pushEmail">Same as email</label>
+          <br />
+
+          <input
+            type="radio"
+            name="pushNotifications"
+            id="pushNothing"
+            value="Nothing"
+            onChange={changeHandler}
+          />
+          <label htmlFor="pushNothing">No Push Notifications</label>
+          <br />
+        </fieldset>
       </form>
     </div>
   );
