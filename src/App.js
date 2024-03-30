@@ -129,7 +129,7 @@ function App() {
         <label htmlFor="postalCode">ZIP / Postal Code</label>
         <br />
         <input
-          type="text"
+          type="number"
           name="postalCode"
           id="postalCode"
           placeholder="800001"
@@ -199,6 +199,7 @@ function App() {
             id="pushEverything"
             value="Everything"
             onChange={changeHandler}
+            className="my-2"
           />
           <label htmlFor="pushEverything">Everything</label>
           <br />
@@ -209,6 +210,7 @@ function App() {
             id="pushEmail"
             value="sameAsEmail"
             onChange={changeHandler}
+            className="my-2"
           />
           <label htmlFor="pushEmail">Same as email</label>
           <br />
@@ -219,10 +221,15 @@ function App() {
             id="pushNothing"
             value="Nothing"
             onChange={changeHandler}
+            className="my-2"
           />
           <label htmlFor="pushNothing">No Push Notifications</label>
           <br />
         </fieldset>
+
+        <button type="submit"
+        className="px-6 py-1 text-center bg-blue-600 rounded-md text-white font-semibold"
+        >Save</button>
       </form>
     </div>
   );
